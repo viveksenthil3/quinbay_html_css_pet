@@ -1,0 +1,357 @@
+/* ####################### Common ########################## */
+
+:root{
+  --green: #65c178;
+  --text-primary: #585858;
+  --text-secondary: rgb(141, 141, 141);
+  --dash: #e2e2e2;
+  --background-secondary: #f6f6f6;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  margin: 0;
+}
+
+.outlined-button{
+  padding: 8px 12px;
+  /* display: block; */
+  background-color: rgb(0,0,0,0);
+  border-radius: 2px;
+  font-weight: 400;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.button-white{
+  border: 2px solid white;
+  color: white;
+}
+
+.button-green{
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.bg-green{
+  background-color: var(--green);
+}
+
+
+.dash{
+  height: 5px;
+  flex-grow: 1;
+  margin: 0 12px;
+  border-radius: 10px;
+  background-color: var(--dash);
+}
+
+.text-primary{
+  color: var(--text-primary);
+}
+
+.text-secondary{
+  color: var(--text-secondary);
+}
+
+.text-green{
+  color: var(--green);
+}
+
+.bg-secondary{
+  background-color: var(--background-secondary);
+}
+
+.logo{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* ###################    navbar and carousel ################ */
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  max-width: 100%;
+  justify-content: space-between;
+  padding: 12px 10%;
+  z-index: 100;
+}
+
+#logo-wrapper{
+  color: white;
+}
+
+/* header nav{
+  display: flex;
+} */
+
+.nav-link{
+  display: inline-block;
+  padding: 8px 12px;
+  color: white;
+}
+
+.carousel{
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-1{
+  width: 100%;
+  height: 100%;
+}
+
+
+.carousel-img-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-img-wrapper .image-text{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 0 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-img-wrapper .image-title{
+  font-weight: bold;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-img-wrapper .image-description{
+  text-align: center;
+}
+
+.self-center{
+  align-self: center;
+}
+
+
+/* #######################   Services Section ####################### */
+
+
+.service-card-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 48px 10%;
+}
+
+.service-card{
+  width: 320px;
+  height: fit-content;
+  display: flex;
+  margin: 0 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .service-card .logo{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+} */
+
+.service-card .logo i{
+  color: white;
+  font-size: 48px;
+}
+
+.service-card .title{
+  font-weight: 600;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.service-card .description{
+  color: var(--text-secondary);
+  margin: 20px 0;
+}
+.service-card button{
+  margin: 20px 0;
+}
+
+
+/* ######################## customers section ###################### */
+
+.customers{
+  padding-bottom: 120px;
+}
+
+.customers .title-wrapper{
+  display: flex;
+  margin: 28px 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.customers .title{
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.customers .description{
+  margin: 20px 8%;
+  text-align: center;
+  /* margin: 20px 0; */
+}
+
+.customers .image-wrapper{
+  display: grid;
+  margin: 40px 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2px;
+}
+
+.customers .image{
+  height: 320px;
+  /* margin: 1px; */
+}
+
+.customers .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.call-to-action{
+  box-shadow: inset 0px 3px 7px 0px #00000014;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* height: 400px; */
+}
+
+.call-to-action .logo{
+  margin: 80px 0;
+}
+
+.call-to-action .title{
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.call-to-action .description{
+  margin: 0 12%;
+  text-align: center;
+}
+
+.call-to-action button{
+  margin: 40px 0;
+}
+
+.quote-wrapper{
+  height: 28vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.quote-wrapper .image{
+  width: 100%;
+  filter: saturate(0);
+  object-fit: contain;
+}
+
+.quote-wrapper .quote{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: white;
+  font-size: 20px;
+}
+
+
+/* ####################### Companion section ########################### */
+
+
+.companion{
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  height: 300px;
+  margin: 40px 0;
+}
+
+.companion .title-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 80%; */
+  margin: 28px 20%;
+}
+
+.companion .title{
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.companion .description{
+  margin: 40px 12%;
+  text-align: center;
+}
+
+.companion .cards{
+  margin: 0 40px;
+}
+
+.companion .card{
+  width: 320px;
+
+}
+
+.companion .card .image{
+  width: 100%;
+  height: 200px;
+}
+
+.companion .card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.companion .card button{
+  background-color: rgb(0,0,0,0);
+  border: none;
+  width: 100%;
+  padding: 8px 0;
+}
