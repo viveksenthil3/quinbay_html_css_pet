@@ -6,6 +6,10 @@
   --text-secondary: rgb(141, 141, 141);
   --dash: #e2e2e2;
   --background-secondary: #f6f6f6;
+  --background-dark: #363b3f;
+  --hover-button-white: rgb(255, 255, 255, .3);
+  --hover-button-green: #ebebeb;
+  --hover-image: #65c177a2;
 }
 
 *{
@@ -26,16 +30,32 @@ body{
   width: fit-content;
   height: fit-content;
   cursor: pointer;
+  transition: all .5s;
+}
+
+.outlined-button:hover{
+  transform: scale(.9, .9);
 }
 
 .button-white{
   border: 2px solid white;
   color: white;
+  /* transition: all .2s; */
+}
+
+.button-white:hover{
+  background-color: var(--hover-button-white);
 }
 
 .button-green{
   border: 2px solid var(--green);
   color: var(--green);
+}
+
+.button-green:hover{
+  background-color: var(--hover-button-green);
+  border-color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 .bg-green{
@@ -75,6 +95,13 @@ body{
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.logo:hover{
+  background-color: var(--text-primary);
+  transform: scale(.9, .9);
 }
 
 /* ###################    navbar and carousel ################ */
@@ -94,6 +121,8 @@ header{
 
 #logo-wrapper{
   color: white;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 /* header nav{
@@ -104,6 +133,16 @@ header{
   display: inline-block;
   padding: 8px 12px;
   color: white;
+  cursor: pointer;
+}
+
+.nav-links .dropdown div{
+  display: none;
+}
+
+.nav-links .dropdown:active div{
+  color: green;
+  display: block;
 }
 
 .carousel{
@@ -238,16 +277,40 @@ header{
 }
 
 .customers .image{
+  position: relative;
   height: 320px;
-  /* margin: 1px; */
+  overflow: hidden;
+  transition: all .5s;
 }
 
 .customers .image img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all .5s;
 }
 
+.customers .image:hover img{
+  transform: rotate(10deg) scale(1.2, 1.2);
+}
+
+
+.green-hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hover-image);
+  opacity: 0;
+  /* display: none; */
+  transition: all .5s;
+}
+
+.customers .image:hover .green-hover{
+  opacity: 1;
+  /* display: block; */
+}
 
 .call-to-action{
   box-shadow: inset 0px 3px 7px 0px #00000014;
@@ -266,6 +329,15 @@ header{
   font-weight: 500;
   font-size: 28px;
   margin-bottom: 40px;
+}
+
+.call-to-action .title .action{
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.call-to-action .title span.text-green:hover{
+  color: var(--text-primary);
 }
 
 .call-to-action .description{
@@ -307,7 +379,7 @@ header{
   /* display: flex;
   flex-direction: column;
   align-items: center; */
-  height: 300px;
+  /* height: 300px; */
   margin: 40px 0;
 }
 
@@ -331,16 +403,21 @@ header{
 
 .companion .cards{
   margin: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .companion .card{
-  width: 320px;
-
+  width: 400px;
+  margin: 20px 20px;
 }
 
 .companion .card .image{
   width: 100%;
-  height: 200px;
+  height: 280px;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .companion .card img{
@@ -353,5 +430,22 @@ header{
   background-color: rgb(0,0,0,0);
   border: none;
   width: 100%;
-  padding: 8px 0;
+  margin-top: 28px;
+  padding: 20px 0;
+  background-color: var(--dash);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all .5s;
+}
+
+.companion .card button:hover{
+  background-color: var(--background-dark);
+  color: var(--green);
+}
+
+footer{
+  background-color: var(--background-dark);
+  padding: 20px 14%;
+  color: white;
 }
